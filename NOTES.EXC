@@ -1,0 +1,155 @@
+for edit:-
+check whether NGS for the department exists or not if exists then only i can edit else 
+msg will be ngs doesn't exist
+
+for delete:-
+check whether NGS for the department exists or not if exists then only i can delete else  
+we cann't delete if ngs doen't exists
+
+for fetch:-
+i have to get birthday or anniversory from the frontend and compare birthday or anniversory from the 
+current date..
+for the birthday or anniversory i will get from the frontend in the form of ioISOstring
+
+
+
+fetch the date whose type is birthday and also fetch the date whose type is anniversory
+then compare the date with the current date if anyone of the above date matches with the 
+birthday or anniversory then console.log the type and also show the details of the employee 
+table
+
+For mail send
+
+
+mail will be send to the hr person,receipent and Manager i have to get it from the employee table
+and once the mail is send then in the mail_log is_mail_trigger will be 1 and corresponding NGS
+will be written there... -->DONE
+
+make an api when i will hit the api the the function will be call  
+
+Date:- 19.03.2024
+1. Once the mail is triggered then insert into the mai_log table the NGS of the employee,
+is_mail_trigger is yes and current date(
+Note:- mail will be only trigger when the api(when BIRTHDAY/ANNIVERSORY is matches with the 
+current date) will hit ) 
+
+2. upload the excel sheet and that uploaded sheet data will be stored into database
+Things to do(not urgent)(isko ni v karnge to ho jayega):-
+a. column of the why_special getting from the excel should be in the array of object
+as [{type:Birthday, date:04.11.2015},{type: anniversory, date:11.01.2021}]
+youtube :- Node.js Project to Import Excel Sheet Data into MySQL Database Using xlsx Module in Javascript
+
+3. make UI for all the api which i have made...(critical things for showcase)
+
+4. mail_controller api :- depends on generate button once we click on the send button
+ present inside the generate button then mail control api will be called for that emails
+for HR_email, reciepent_email, manager_email.(or entry corresponding to the email)
+ 
+
+
+Things done:-
+1. Once the mail is triggered then insert into the mai_log table the NGS of the employee,
+is_mail_trigger is yes and current date.
+2.upload the excel sheet and that uploaded sheet data will be stored into database
+
+
+Step 1: Select Excel as your file type
+Step 2: Choose the Excel file you want to convert to SQL
+Step 3: Select whether the first row contains data or column names
+Step 4: Type the name of the Excel worksheet that holds your data
+Step 5: Input the cell range of the data that you want to convert
+Step 6: Type in a name for your database table
+Step 7: Convert your file!
+
+Date:- 20.03.2024
+generate should not change the page i
+
+getempbydate(birthday/anniversory)
+/fetch :--
+aaj kiska kiska birthday hai uske liye mujhe jiska birthday ya anniversory hai usko aaj ke 
+date se compare karna hoga ...birthday and anniversory ke liye alag column banana hoga 
+DONE
+
+/mailsend :--
+jo v req.body se ngs mil rha hoga usko mujhe check karna hai ki uska birthday aaj hai ya 
+ni ...agar aaj uska birthday hoga to usko mail chala jayega
+payload:- NGS and Image(blop data)
+
+/cronjob api :--
+ek flag jaa rha hoga from req.body se jo flag Start ya Stop hoga if Start then cronjob start
+else Cronjob stop
+
+
+if flag = start then mailcontroller will call if flag = stop mailcontroller will stop
+
+
+
+database-->api-->
+
+
+Date:- 21.03.2024,Thrusday
+
+Backend API : like excel sheet upload from frontend
+Mail send: send image  image and ngs is needed both(NEED TO WORK ON IT)
+frontend work:- 
+1.Employee add page
+2.Employee master page (whole entry of employee)
+3.Dashboard page:-(Only those employee will be visible whose birthday /anniversary is today)
+ 
+Target:- complete above in the first half and in 2nd half integrate api
+
+solution and thoughts:-
+like excel sheet upload from frontend..
+chat gpt that take excel file from from data of the api http://localhost:4002/api/v1/master/emp/excel
+so modify the code
+how to put data into form-data(youtube)
+
+multi-part data form the array
+
+excel sheet upload
+image upload
+excelsheet functionality:- jo v file upload hua agar meko pta hai to usko db me laga do
+excel sheet upload or image upload dono ke liye alag alag function banana hai
+upload controllers---> DONE
+NOT SOLVED YET:-
+1.problem making route for mail send :--
+how to send text and image both from file-data --->NOT SOLVED YET
+2. birthday and anniversary i am getting in the employee master page from DB is not in correct 
+formate and also this one is uploaded from excel sheet --- DONE
+
+
+
+
+Date:- 22.03.2024
+
+Problem :- 
+1.only compare with day and month in fetch api -- DONE
+2.problem making route for mail send :--
+how to send text and image both from file-data --->NOT SOLVED YET
+3. frontend make one by one
+critical things
+things to do 
+urgent  --->3
+
+Follow one pattern always:-
+1. DB design --> Backend --> frontend
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
